@@ -1,0 +1,99 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maroon: #800000;
+    --maroon-dark: #5a0000;
+    --yellow: #ffd700;
+    --white: #ffffff;
+    --muted: #f4f4f4;
+    --text: #2d2d2d;
+}
+
+
+/* about cets--------- */
+
+
+.aboutCETs {
+    width: 100%;
+    padding: 60px 24px;
+    /* background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(../images/cetsBanner.png); */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--muted); */
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+/* Section Title */
+.aboutCETs h2 {
+    text-align: center;
+    font-size: 36px;
+    color: yellow;
+    margin-bottom: 40px;
+}
+
+/* Content Layout: responsive two-column that stacks on small screens */
+.aboutCETsContents {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden; /* clearfix so the container contains the floated image */
+}
+
+.aboutCETsContents img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    float: left;
+    margin: 0 15px 15px 0;
+}
+
+.aboutCETsContents p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #aaaaaa;
+    text-align: justify;
+}
+
+.aboutCETsContentstwo {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden; /* clears the float so the container doesn't collapse */
+}
+
+.aboutCETsContentstwo img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    float: right;
+    margin: 0 0 15px 15px;
+}
+
+.aboutCETsContentstwo p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #aaaaaa;
+    text-align: justify;
+}
+
+
+@media (max-width: 700px) {
+    .aboutCETs { padding: 30px 16px; }
+    .aboutCETsContents { flex-direction: column; gap: 16px; }
+    .aboutCETsContents img { width: 100%; max-width: none; flex: none; }
+    .aboutCETsContents p { min-width: 0; }
+    .aboutCETsContentstwo { flex-direction: column; gap: 16px; }
+    .aboutCETsContentstwo img { float: none; max-width: none; margin: 0 0 16px 0; }
+    .aboutCETsContentstwo p { min-width: 0; order: 0; }
+
+}
+

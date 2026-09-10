@@ -1,0 +1,56 @@
+/* .organizationChartBanner {
+    width: 100%;
+    padding: 60px 24px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.organizationChartBanner h2 {
+    text-align: center;
+    font-size: 36px;
+    color: yellow;
+    margin-bottom: 40px;
+}
+
+.organizationChartBannerContents {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.chartCard {
+    display: block;
+    text-decoration: none;
+    flex: 0 0 30%;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.chartCard:hover {
+    transform: scale(1.03);
+}
+
+.chartCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.chartCard p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #aaaaaa;
+}
+
+@media (max-width: 700px) {
+    .organizationChartBanner { padding: 30px 16px; }
+    .organizationChartBannerContents { flex-direction: column; align-items: center; gap: 16px; }
+    .chartCard { flex: none; max-width: 100%; }
+} */

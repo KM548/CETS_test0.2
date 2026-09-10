@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maroon: #800000;
+    --maroon-dark: #5a0000;
+    --yellow: #ffd700;
+    --white: #ffffff;
+    --muted: #f4f4f4;
+    --text: #2d2d2d;
+}
+
+header {
+    width: 100%;
+    background: var(--maroon);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding-top: 110px; /* clears the fixed .logo header (80px img + 15px*2 padding) */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--muted);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: var(--maroon);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--white); /* was inheriting default black — invisible on maroon bg */
+}
+
+/* main--------------------------------------------------- */
+
+/* ============================
+   Title Section
+   (h1, intro p, hero img, long p)
+============================ */
+.Title {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.Title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--maroon-dark); /* now matches the --maroon-dark variable already defined */
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.Title > p:first-of-type {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.Title img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.Title > p:last-of-type {
+    text-align: justify;
+    font-size: 1.05rem;
+    color: var(--text);
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================
+   Content Section
+   .content holds several .card blocks, each with
+   one img + one p inside, laid out side by side.
+============================ */
+.content {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cards {
+    display: flex;
+    align-items: stretch;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* keeps the image corners clipped to the card radius */
+}
+
+.cards img {
+    width: 380px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.cards p {
+    display: flex;
+    align-items: center;
+    padding: 35px 40px;
+    font-size: 1.02rem;
+    color: var(--text);
+    text-align: justify;
+}
+
+/* ============================
+   Responsive Adjustments
+============================ */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .cards p {
+        padding: 25px;
+    }
+
+    .Title h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        padding: 12px 20px;
+        gap: 12px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    body {
+        padding-top: 90px;
+    }
+}

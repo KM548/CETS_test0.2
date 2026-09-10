@@ -1,0 +1,119 @@
+
+  :root{
+    --maroon: #6d1c2b;
+    --maroon-deep: #4a1220;
+    --gold: #cf9f3a;
+    --gold-soft: #e6c477;
+    --cream: #f4ecd8;
+    --ink: #1c1410;
+  }
+
+  html, body{
+    margin: 0;
+    height: 100%;
+  }
+
+  body{
+    font-family: 'Georgia', serif;
+    color: var(--cream);
+    overflow-x: hidden;
+
+    /* --- layered background ---
+       1. radial glow (top)
+       2. diagonal blueprint grid
+       3. base maroon-to-ink gradient
+    */
+    background-color: var(--maroon-deep);
+    background-image:
+      radial-gradient(ellipse at 50% -10%, rgba(207,159,58,0.20), transparent 55%),
+      repeating-linear-gradient(45deg, rgba(230,196,119,0.05) 0px, rgba(230,196,119,0.05) 1px, transparent 1px, transparent 26px),
+      repeating-linear-gradient(-45deg, rgba(230,196,119,0.05) 0px, rgba(230,196,119,0.05) 1px, transparent 1px, transparent 26px),
+      linear-gradient(160deg, var(--maroon) 0%, var(--maroon-deep) 55%, var(--ink) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* faint rotating gear watermark, bottom-right — nods to the Engineering & Technology council mark */
+  body::before{
+    content:"";
+    position: fixed;
+    right: -6vw;
+    bottom: -6vw;
+    width: 42vw;
+    height: 42vw;
+    max-width: 520px;
+    max-height: 520px;
+    background: radial-gradient(circle, rgba(207,159,58,0.10) 0%, rgba(207,159,58,0.05) 45%, transparent 70%);
+    border: 2px dashed rgba(230,196,119,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: spin 90s linear infinite;
+  }
+
+  body::after{
+    content:"";
+    position: fixed;
+    left: -8vw;
+    top: -8vw;
+    width: 30vw;
+    height: 30vw;
+    max-width: 380px;
+    max-height: 380px;
+    border: 1px dashed rgba(230,196,119,0.10);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: spin 70s linear infinite reverse;
+  }
+
+  @keyframes spin{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+  }
+
+  /* demo content so the background is visible in context — delete this block in production */
+  .demo{
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .demo .eyebrow{
+    letter-spacing: 0.35em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 1rem;
+  }
+
+  .demo h1{
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin: 0 0 0.75rem;
+    color: var(--cream);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  .demo p{
+    max-width: 34rem;
+    color: rgba(244,236,216,0.75);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .demo .rule{
+    width: 64px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1.5rem 0;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body::before, body::after{ animation: none; }
+  }
