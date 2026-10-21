@@ -99,3 +99,21 @@ document.addEventListener('keydown', function(e) {
         mainNav.classList.remove('open');
     }
 });
+
+const banner = document.querySelector('.banner');
+const bannerVideo = banner?.querySelector('video');
+
+if (banner && bannerVideo) {
+    bannerVideo.addEventListener('playing', () => {
+        banner.classList.add('video-playing');
+    });
+
+    const showFallback = () => banner.classList.remove('video-playing');
+    bannerVideo.addEventListener('error', showFallback);
+    bannerVideo.querySelector('source')?.addEventListener('error', showFallback);
+
+    const playback = bannerVideo.play();
+    if (playback) {
+        playback.catch(showFallback);
+    }
+}

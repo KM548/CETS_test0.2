@@ -1,0 +1,69 @@
+.chapter7-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 20px 60px;
+    text-align: center;
+}
+
+.chapter7-page h2 {
+    margin-bottom: 10px;
+    color: var(--maroon-dark);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+}
+
+.chapter7-page > p {
+    margin-bottom: 16px;
+}
+
+.chapter7-open-link,
+.chapter7-back-link {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background: var(--maroon);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.chapter7-open-link:hover,
+.chapter7-back-link:hover,
+.chapter7-open-link:focus-visible,
+.chapter7-back-link:focus-visible {
+    background: var(--maroon-dark);
+}
+
+.chapter7-pdf {
+    display: block;
+    width: 100%;
+    height: min(78vh, 1000px);
+    min-height: 600px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.chapter7-page .chapter7-fallback {
+    margin: 12px 0 24px;
+}
+
+.chapter7-fallback a {
+    color: var(--maroon);
+}
+
+.chapter7-back-link {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .chapter7-page {
+        padding: 24px 12px 40px;
+    }
+
+    .chapter7-pdf {
+        height: 72vh;
+        height: 72dvh;
+        min-height: 420px;
+    }
+}

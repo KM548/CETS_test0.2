@@ -6,7 +6,7 @@
 }
 
 :root {
-    --maroon: #800000;
+    --maroon: #6d1c2b;
     --maroon-dark: #5a0000;
     --yellow: #ffd700;
     --white: #ffffff;
@@ -22,27 +22,36 @@ header {
 }
 
 body {
-    padding-top: 110px; /* clears the fixed .logo header (80px img + 15px*2 padding) */
+    padding-top: 110px;
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--muted);
     color: var(--text);
     line-height: 1.7;
 }
 
-/* Logo Section */
-.logo {
-    display: flex;
-    align-items: center;
-    padding: 15px 40px;
-    gap: 20px;
+.site-header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     z-index: 1001;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px;
+    gap: 20px;
     background: var(--maroon);
     width: 100%;
     box-sizing: border-box;
+}
+
+.logo > a {
+    display: flex;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -52,9 +61,12 @@ body {
 }
 
 .logo h1 {
+    min-width: 0;
     font-size: 30px;
     font-weight: bold;
     color: var(--white); /* was inheriting default black — invisible on maroon bg */
+    line-height: 1.2;
+    margin: 0;
 }
 
 /* main--------------------------------------------------- */
@@ -83,6 +95,20 @@ body {
     color: #555;
     margin-bottom: 25px;
     padding: 0 10px;
+}
+
+.chapter7-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background: var(--maroon);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.chapter7-link:hover,
+.chapter7-link:focus-visible {
+    background: var(--maroon-dark);
 }
 
 .Title img {
@@ -166,11 +192,32 @@ body {
 
     .logo {
         padding: 12px 20px;
-        gap: 12px;
+        gap: 10px 12px;
     }
 
     .logo h1 {
-        font-size: 22px;
+        flex: 1;
+        min-width: 0;
+        font-size: clamp(16px, 4vw, 22px);
+    }
+
+    body {
+        padding-top: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        padding: 10px 12px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo h1 {
+        font-size: clamp(14px, 4vw, 18px);
     }
 
     body {

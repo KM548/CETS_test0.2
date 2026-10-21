@@ -20,9 +20,10 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
     padding-bottom: 30px;
+    text-align: center;
 }
 
 .footer-col h3 {
@@ -106,7 +107,7 @@ footer {
 
 @media (max-width: 768px) {
     .footer-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 24px;
     }
 }
@@ -121,4 +122,3 @@ footer {
         justify-content: center;
     }
 }
-

@@ -182,7 +182,9 @@ body {
 }
 
 .org-modal.open {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .org-modal-overlay {
@@ -196,9 +198,9 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: row;
-    width: min(1000px, 92vw);
-    max-height: 85vh;
-    margin: 7vh auto 0;
+    width: min(1200px, 94vw);
+    height: min(72vh, 560px);
+    max-height: 90vh;
     background: var(--white);
     border-radius: 14px;
     overflow: hidden;
@@ -214,7 +216,7 @@ body {
     border: none;
     font-size: 28px;
     line-height: 1;
-    color: var(--white);
+    color: var(--maroon);
     cursor: pointer;
 }
 
@@ -250,29 +252,31 @@ body {
     font-size: 0.85rem;
     opacity: 0.85;
     margin: 0;
-    display: none;
 }
 
-/* Right column: horizontally swipeable officer cards */
+/* Officer cards scroll horizontally on desktop */
 .org-modal-right {
     flex: 1;
     overflow: hidden;
     background: var(--muted);
+    min-width: 0;
 }
 
 .org-modal-officers {
     display: flex;
-    gap: 18px;
+    gap: 14px;
     height: 100%;
-    padding: 24px 20px;
+    padding: 20px 18px;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    align-items: center;
 }
 
 .org-modal-officers::-webkit-scrollbar {
-    height: 8px;
+    width: 6px;
+    height: 6px;
 }
 
 .org-modal-officers::-webkit-scrollbar-thumb {
@@ -281,25 +285,31 @@ body {
 }
 
 .officer-card {
-    flex: 0 0 180px;
+    flex: 0 0 200px;
+    height: 270px;
     scroll-snap-align: start;
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-    padding: 14px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     gap: 8px;
 }
 
 .officer-card img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 176px;
+    max-height: 176px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 0;
     object-fit: cover;
     background: var(--muted);
+    flex-shrink: 0;
 }
 
 .officer-card h4 {
@@ -348,58 +358,92 @@ body {
 
     /* Modal responsive styles */
     .org-modal-content {
-        flex-direction: row; /* keep logo LEFT, officers RIGHT even on mobile */
-        width: 94vw;
-        margin-top: 10vh;
-        max-height: 80vh;
+        flex-direction: column;
+        width: 96vw;
+        height: 90vh;
+        height: 90dvh;
+        max-height: 90vh;
+        max-height: 90dvh;
     }
 
     .org-modal-left {
-        flex: 0 0 110px;
-        padding: 16px 8px;
-        gap: 6px;
+        display: grid;
+        flex: 0 0 auto;
+        grid-template-columns: 72px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        align-content: center;
+        min-height: 112px;
+        padding: 16px 48px 16px 18px;
+        gap: 14px;
+        text-align: left;
     }
 
     .org-modal-left img {
-        width: 60px;
-        height: 60px;
+        grid-row: 1 / span 2;
+        width: 72px;
+        height: 72px;
     }
 
     .org-modal-left h3 {
-        font-size: 0.95rem;
+        min-width: 0;
+        font-size: 1.1rem;
     }
 
     .org-modal-left p {
-        display: none; /* keep it compact on small screens */
+        min-width: 0;
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    .org-modal-right {
+        display: flex;
+        flex: 1;
+        min-height: 0;
     }
 
     .org-modal-officers {
-        padding: 16px 12px;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 14px;
         gap: 12px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        scroll-padding-block: 16px;
+        touch-action: pan-y;
     }
 
     .officer-card {
-        flex: 0 0 150px;
-        padding: 10px;
-        gap: 6px;
+        flex: 0 0 auto;
+        width: min(100%, 260px);
+        height: 300px;
+        min-height: 300px;
+        align-self: center;
+        padding: 12px;
+        gap: 8px;
     }
 
     .officer-card img {
-        width: 70px;
-        height: 70px;
+        width: min(100%, 220px);
+        max-width: 220px;
+        max-height: 220px;
     }
 
     .officer-card h4 {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .officer-card p {
-        font-size: 0.7rem;
+        font-size: 0.85rem;
     }
 
     .org-modal-close {
         font-size: 24px;
-        top: 8px;
-        right: 10px;
+        top: 10px;
+        right: 12px;
+        color: var(--white);
     }
 }
