@@ -25,10 +25,10 @@ const orgData = {
   bsit: {
     name: "SocITech",
     subtitle: "Bachelor of Science in Information and Technology",
-    logo: "images/bsitLogo.jpg",
+    logo: "images/bsitLogo.png",
     officers: [
-      { name: "Officer Name", role: "President", img: "images/bsitLogo.jpg" },
-      { name: "Officer Name", role: "Vice President", img: "images/bsitLogo.jpg" }
+      { name: "Officer Name", role: "President", img: "images/bsitLogo.png" },
+      { name: "Officer Name", role: "Vice President", img: "images/bsitLogo.png" }
     ]
   },
   bshm: {

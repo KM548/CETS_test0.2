@@ -97,8 +97,8 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: contain;
-    background: black;
-    box-shadow: black;
+    background: transparent;
+    box-shadow: transparent;
 }
 
 #cets-org-charts img {
