@@ -66,6 +66,24 @@ const orgData = {
       { name: "Officer Name", role: "President", img: "images/bseneLogo.jpg" },
       { name: "Officer Name", role: "Vice President", img: "images/bseneLogo.jpg" }
     ]
+  },
+  ppg: {
+    name: "PPG",
+    subtitle: "Bachelor of Science in Environmental Engineering",
+    logo: "images/bseneLogo.jpg",
+    officers: [
+      { name: "Officer Name", role: "President", img: "images/bseneLogo.jpg" },
+      { name: "Officer Name", role: "Vice President", img: "images/bseneLogo.jpg" }
+    ]
+  },
+  ppg: {
+    name: "PPG",
+    subtitle: "Bachelor of Science in Environmental Engineering",
+    logo: "images/bseneLogo.jpg",
+    officers: [
+      { name: "Officer Name", role: "President", img: "images/bseneLogo.jpg" },
+      { name: "Officer Name", role: "Vice President", img: "images/bseneLogo.jpg" }
+    ]
   }
 };
 

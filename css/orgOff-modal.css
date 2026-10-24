@@ -37,10 +37,10 @@ body {
 
 .organizationcharts article {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: end;
@@ -66,7 +66,8 @@ body {
 #bshm-org-charts,
 #bsabe-org-charts,
 #bfpt-org-charts,
-#bsene-org-charts {
+#bsene-org-charts,
+#ppg-org-charts {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,8 +76,9 @@ body {
 }
 
 #cets-org-charts {
-    grid-column: 3;
+    grid-column: 1 / -1;
     grid-row: 1;
+    justify-self: center;
 }
 
 #bsit-org-chart { grid-column: 1; grid-row: 3; }
@@ -84,13 +86,24 @@ body {
 #bsabe-org-charts { grid-column: 3; grid-row: 3; }
 #bfpt-org-charts { grid-column: 4; grid-row: 3; }
 #bsene-org-charts { grid-column: 5; grid-row: 3; }
+#ppg-org-charts { grid-column: 6; grid-row: 3; }
+
+#bsit-org-chart,
+#bshm-org-charts,
+#bsabe-org-charts,
+#bfpt-org-charts,
+#bsene-org-charts,
+#ppg-org-charts {
+    align-self: start;
+}
 
 #cets-org-charts img,
 #bsit-org-chart img,
 #bshm-org-charts img,
 #bsabe-org-charts img,
 #bfpt-org-charts img,
-#bsene-org-charts img {
+#bsene-org-charts img,
+#ppg-org-charts img {
     order: 1;
     display: block;
     width: 150px;
@@ -111,7 +124,8 @@ body {
 #bshm-org-charts p,
 #bsabe-org-charts p,
 #bfpt-org-charts p,
-#bsene-org-charts p {
+#bsene-org-charts p,
+#ppg-org-charts p {
     order: 2;
     margin: 0;
     font-size: 1rem;
@@ -125,7 +139,8 @@ body {
 #bshm-org-charts h3,
 #bsabe-org-charts h3,
 #bfpt-org-charts h3,
-#bsene-org-charts h3 {
+#bsene-org-charts h3,
+#ppg-org-charts h3 {
     color: rgb(255, 255, 255);
 }
 
@@ -153,9 +168,10 @@ body {
 
     #bsit-org-chart { grid-column: 1; grid-row: 3; }
     #bshm-org-charts { grid-column: 2; grid-row: 3; }
-    #bsabe-org-charts { grid-column: 1 / -1; grid-row: 5; }
-    #bfpt-org-charts { grid-column: 1; grid-row: 4; }
-    #bsene-org-charts { grid-column: 2; grid-row: 4; }
+    #bsabe-org-charts { grid-column: 1; grid-row: 4; }
+    #bfpt-org-charts { grid-column: 2; grid-row: 4; }
+    #bsene-org-charts { grid-column: 1; grid-row: 5; }
+    #ppg-org-charts { grid-column: 2; grid-row: 5; }
 }
 
 /* org cards are now clickable ------------------------------------- */
