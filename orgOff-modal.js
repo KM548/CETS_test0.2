@@ -13,7 +13,7 @@
 const orgData = {
   cets: {
     name: "CETS",
-    subtitle: "College of Engineering and Technology",
+    subtitle: "Council of Engineering and Technology Students",
     logo: "images/cetsLogotrans.png",
     officers: [
       { name: "Bliss Montanez", role: "President", img: "images/Officers/CETS/bliss.jpg" },
@@ -24,7 +24,7 @@ const orgData = {
   },
   bsit: {
     name: "SocITech",
-    subtitle: "Bachelor of Science in Information and Technology",
+    subtitle: "Society of Information Technologists",
     logo: "images/bsitLogo.png",
     officers: [
       { name: "Officer Name", role: "President", img: "images/bsitLogo.png" },
@@ -33,7 +33,7 @@ const orgData = {
   },
   bshm: {
     name: "SAHM",
-    subtitle: "Bachelor of Science in Hospitality Management",
+    subtitle: "Student Association of Hospitality Management",
     logo: "images/bshmLogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/bshmLogo.jpg" },
@@ -42,7 +42,7 @@ const orgData = {
   },
   bsabe: {
     name: "ABESS",
-    subtitle: "Bachelor of Science in Agricultural and Biosystems Engineering",
+    subtitle: "Agricultural and Biosystems Engineering Students Society",
     logo: "images/bsabeLogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/bsabeLogo.jpg" },
@@ -50,8 +50,8 @@ const orgData = {
     ]
   },
   bfpt: {
-    name: "EPAFPT",
-    subtitle: "Bachelor of Science in Food Processing & Technology",
+    name: "EntrePle",
+    subtitle: "Entrepreneurial People Student Association of Food Processing and Technology",
     logo: "images/bfptLogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/bfptLogo.jpg" },
@@ -59,8 +59,8 @@ const orgData = {
     ]
   },
   bsene: {
-    name: "SEEC",
-    subtitle: "Bachelor of Science in Environmental Engineering",
+    name: "SEECI",
+    subtitle: "Society if Environmental Engineers Students Chapter Incorporated",
     logo: "images/bseneLogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/bseneLogo.jpg" },
@@ -69,7 +69,7 @@ const orgData = {
   },
   ppg: {
     name: "PPG",
-    subtitle: "Bachelor of Science in Environmental Engineering",
+    subtitle: "Philippine Society of Agricultural and Biosystems Engineers - Pre-Professional Group",
     logo: "images/PPGlogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/PPGlogo.jpg" },
@@ -78,7 +78,7 @@ const orgData = {
   },
   ppg: {
     name: "PPG",
-    subtitle: "Bachelor of Science in Environmental Engineering",
+    subtitle: "Philippine Society of Agricultural and Biosystems Engineers - Pre-Professional Group",
     logo: "images/PPGlogo.jpg",
     officers: [
       { name: "Officer Name", role: "President", img: "images/PPGlogo.jpg" },
